@@ -1,0 +1,351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{6B6F540A-AFD7-4E18-A75E-4A59074B1D08}</ProjectGuid>
+    <RootNamespace>ScienceLibrary</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)DataStructures\src;$(SolutionDir)VertexParser\src;$(SolutionDir)Math\src;$(SolutionDir)ImageParser\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2019;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)DataStructures\src;$(SolutionDir)VertexParser\src;;$(SolutionDir)ImageParser\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2019;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)DataStructures\src;$(SolutionDir)VertexParser\src;$(SolutionDir)Math\src;$(SolutionDir)ImageParser\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2019;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>GLEW_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\GLEW\include;$(SolutionDir)Dependencies\GLFW\include;$(SolutionDir)DataStructures\src;$(SolutionDir)VertexParser\src;;$(SolutionDir)ImageParser\src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\lib-vc2019;$(SolutionDir)Dependencies\GLEW\lib\Release\Win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\tests\code-chunks\ThreadSafeQueue.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter10\cloth-simulation\Example_10_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter10\particle-simulation\Example_10_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter1\color-interpolation\Example_1_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter2\ambiend-diffuse-specular-shading\Example_2_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter2\diffuse-per-vertex-shading-with-one-light-source\Example_2_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter2\discard-fragments\Example_2_4_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter2\subroutine\Example_2_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter3\cartoon-effect\Example_3_4_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter3\fog-effect\Example_3_5_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter3\multiple-positional-lights\Example_3_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter3\per-fragment-shading\Example_3_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter3\spotlight\Example_3_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\2d-texture\Example_4_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\cube-map-reflection\Example_4_4_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\cube-map-refraction\Example_4_5_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\multiple-textures\Example_4_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\normal-maps\Example_4_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\projected-texture\Example_4_6_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\rendering-to-a-texture\Example_4_7_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter4\sampler-objects\Example_4_8_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\bloom-effect\Example_5_4_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\deffered-shading\Example_5_5_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\edge-detection-filter\Example_5_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\gaussian-blur-filter\Example_5_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\hdr-lighting\Example_5_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter5\order-independent-tansparency\Example_5_6_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter6\point-sprites-with-gs\Example_6_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter6\tesselating-a-3d-surface\Example_6_5_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter6\tesselating-a-curve\Example_6_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter6\tesselating-a-quad\Example_6_4_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter6\wireframe-on-top-of-shaded\Example_6_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter7\anti-aliasing-with-PCF\Example_7_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter7\shadow-maps\Example_7_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter7\soft-shadow-edges\Example_7_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter9\animating-surface\Example_9_1_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter9\fountain-transform-feedback\Example_9_3_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\chapter9\particle-fountain\Example_9_2_Window.cpp" />
+    <ClCompile Include="src\tests\opengl-cookbook\common\Grid.cpp" />
+    <ClCompile Include="src\tests\ui\draw-order\DrawOrderWindow.cpp" />
+    <ClCompile Include="src\core\opengl\core\error\ErrorChecker.cpp" />
+    <ClCompile Include="src\core\opengl\index-buffer\IndexBuffer.cpp" />
+    <ClCompile Include="src\core\opengl\program\Program.cpp" />
+    <ClCompile Include="src\core\looper\Looper.cpp" />
+    <ClCompile Include="src\core\application\Application.cpp" />
+    <ClCompile Include="src\core\opengl\vertex-array\VertexArray.cpp" />
+    <ClCompile Include="src\core\window\Window.cpp" />
+    <ClCompile Include="src\tests\workability\Starter.cpp" />
+    <ClCompile Include="src\tests\workability\TestWindow.cpp" />
+    <ClCompile Include="src\core\opengl\vertex-buffer\VertexBuffer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\tests\code-chunks\CondVar.h" />
+    <ClInclude Include="src\tests\code-chunks\FutureExample.h" />
+    <ClInclude Include="src\tests\code-chunks\ThreadSafeQueue.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter10\cloth-simulation\Example_10_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter10\particle-simulation\Example_10_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter1\color-interpolation\Example_1_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter2\ambiend-diffuse-specular-shading\Example_2_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter2\diffuse-per-vertex-shading-with-one-light-source\Example_2_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter2\discard-fragments\Example_2_4_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter2\subroutine\Example_2_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter3\cartoon-effect\Example_3_4_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter3\fog-effect\Example_3_5_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter3\multiple-positional-lights\Example_3_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter3\per-fragment-shading\Example_3_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter3\spotlight\Example_3_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\2d-texture\Example_4_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\cube-map-reflection\Example_4_4_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\cube-map-refraction\Example_4_5_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\multiple-textures\Example_4_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\normal-maps\Example_4_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\projected-texture\Example_4_6_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\rendering-to-a-texture\Example_4_7_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter4\sampler-objects\Example_4_8_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\bloom-effect\Example_5_4_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\deffered-shading\Example_5_5_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\edge-detection-filter\Example_5_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\gaussian-blur-filter\Example_5_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\hdr-lighting\Example_5_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter5\order-independent-tansparency\Example_5_6_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\point-sprites-with-gs\Example_6_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\tesselating-a-3d-surface\Example_6_5_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\tesselating-a-3d-surface\TeapotData.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\tesselating-a-curve\Example_6_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\tesselating-a-quad\Example_6_4_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter6\wireframe-on-top-of-shaded\Example_6_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter7\anti-aliasing-with-PCF\Example_7_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter7\shadow-maps\Example_7_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter7\soft-shadow-edges\Example_7_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter9\animating-surface\Example_9_1_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter9\fountain-transform-feedback\Example_9_3_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\chapter9\particle-fountain\Example_9_2_Window.h" />
+    <ClInclude Include="src\tests\opengl-cookbook\common\Grid.h" />
+    <ClInclude Include="src\tests\ui\draw-order\DrawOrderWindow.h" />
+    <ClInclude Include="src\core\opengl\core\error\ErrorChecker.h" />
+    <ClInclude Include="src\core\opengl\index-buffer\IndexBuffer.h" />
+    <ClInclude Include="src\core\opengl\program\Program.h" />
+    <ClInclude Include="src\core\opengl\core\bindable\Bindable.h" />
+    <ClInclude Include="src\core\looper\event\Event.h" />
+    <ClInclude Include="src\core\looper\Looper.h" />
+    <ClInclude Include="src\core\application\Application.h" />
+    <ClInclude Include="src\core\opengl\vertex-array\VertexArray.h" />
+    <ClInclude Include="src\core\opengl\vertex-buffer\layout\VertexBufferLayout.h" />
+    <ClInclude Include="src\core\window\Window.h" />
+    <ClInclude Include="src\tests\workability\TestWindow.h" />
+    <ClInclude Include="src\core\opengl\vertex-buffer\VertexBuffer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataStructures\DataStructures.vcxproj">
+      <Project>{84c260ea-a0ec-4129-9bd9-9fc1bb108809}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ImageParser\ImageParser.vcxproj">
+      <Project>{12a5a81a-a2f1-41f0-a733-7c1652f2a905}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\VertexParser\VertexParser.vcxproj">
+      <Project>{87ab178a-5c27-4c77-91b1-69dbd43877fd}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_1\ParticleSimulation_CS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_1\ParticleSimulation_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_1\ParticleSimulation_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_2\ClothSimulatioNormals_CS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_2\ClothSimulation_CS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_2\ClothSimulation_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter10\ex_2\ClothSimulation_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter1\color-interpolation\ColorInterpolation.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_1\DiffuseShading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_2\ADS_Shading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_2\Flat_Shading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_2\TwoSided_Shading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_3\Subroutine.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter2\ex_4\DiscardFragment.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_1\DirectionalLight.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_1\MultiplePositionalLights.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_2\HalfwayVector.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_2\PerFragmentShading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_3\Spotlight.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_4\CartoonEffect.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter3\ex_5\FogEffect.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_1\2DTexture.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_2\AlphaMapsToDiscardPixels.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_2\MultipleTextures.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_3\NormalMaps.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_4\CubeMapReflection.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_5\CubeMapRefraction.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_6\ProjectedTexture.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_7\FBO_Example.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter4\ex_8\SamplerObjects.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_1\EdgeDetectionFilter.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_1\RenderPlane.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_2\GaussianBlurFilter.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_3\HDR_Lighting.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_4\BloomEffect.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_5\DefferedShading.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter5\ex_6\OrderIndependentTransparency.shader" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_1\PointSprites_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_1\PointSprites_GS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_1\PointSprites_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_2\Wireframe_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_2\Wireframe_GS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_2\Wireframe_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_3\TessCurve_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_3\TessCurve_TCS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_3\TessCurve_TES.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_3\TessCurve_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_4\TessQuad_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_4\TessQuad_GS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_4\TessQuad_TCS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_4\TessQuad_TES.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_4\TessQuad_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_5\TessSurface_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_5\TessSurface_GS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_5\TessSurface_TCS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_5\TessSurface_TES.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter6\ex_5\TessSurface_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_1\ShadowMaps_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_1\ShadowMaps_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_2\ShadowMaps_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_2\ShadowMaps_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_3\SoftEdges_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter7\ex_3\SoftEdges_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_1\AnimatedSurface_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_1\AnimatedSurface_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_2\AnimatedFountain_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_2\AnimatedFountain_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_3\AnimatedFountain_FS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\chapter9\ex_3\AnimatedFountain_VS.glsl" />
+    <None Include="res\shaders\opengl-cookbook\common\GridCoords.shader" />
+    <None Include="res\shaders\test1\Shader.shader" />
+    <None Include="res\shaders\ui\draw-order\FS.glsl" />
+    <None Include="res\shaders\ui\draw-order\GS.glsl" />
+    <None Include="res\shaders\ui\draw-order\VS.glsl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
